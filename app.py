@@ -3,13 +3,23 @@ import pandas as pd
 import torch
 import html
 from sentence_transformers import SentenceTransformer, util
-from func import load_model, load_data
-
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
+@st.cache_resource
+def load_model():
+    return SentenceTransformer("KiruruP/anime-recommendation-multilingual-mpnet-base-v2-peft")
+
+@st.cache_data
+def load_data(path):
+    return pd.read_csv(path)
+
+@st.cache_resource
+def embed_corpus(_model, texts):
+    return _model.encode(texts, convert_to_tensor=True)
 st.set_page_config(
     page_title="🎌 Anime Recommender",
+    page_icon = 
     layout="wide",
 )
 def render_anime_card(row):
