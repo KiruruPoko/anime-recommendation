@@ -19,7 +19,7 @@ def embed_corpus(_model, texts):
     return _model.encode(texts, convert_to_tensor=True)
 st.set_page_config(
     page_title="🎌 Anime Recommender",
-    page_icon = 
+    page_icon = "🍿"
     layout="wide",
 )
 def render_anime_card(row):
