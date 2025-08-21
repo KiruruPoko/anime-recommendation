@@ -20,7 +20,7 @@ def embed_corpus(_model, texts):
 st.set_page_config(
     page_title="🎌 Anime Recommender",
     page_icon = "🍿",
-    layout="wide",
+    layout="centered",
 )
 def render_anime_card(row):
     css_style = """
@@ -124,14 +124,14 @@ def recommend_anime(q_encode, embeddings, df, top_k=3):
 
 # --- Streamlit app ---
 def main():
-    df = load_data("../anime-recommendation/data/anime_clean.csv") 
+    df = load_data("../anime recommendation/data/anime_clean.csv") 
     model = load_model()
     #embeddings = embed_corpus(model, df['text_corpus'].to_list())
     embeddings = torch.load('embedding_corpus.pt', map_location=device).to(device)
 
     st.title("Anime Recommendation System 🇯🇵")
 
-    query = st.text_input("Enter your anime search query 👇", placeholder = "อนิเมะเกี่ยวกับชมรมดนตรีญี่ปุ่นโบราณ")
+    query = st.text_input("Enter your anime search query 👇", placeholder = "Example query: Anime about spy that has to create a fake family for a mission")
 
     if query:
         q_encode = model.encode(query, convert_to_tensor=True, device=device)
