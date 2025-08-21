@@ -11,7 +11,7 @@ This project is heavily inspired from [manga-recommendation](https://github.com/
 
 ## Want to run on local? Following this guideline!!
 1. Clone this repository
-2. Install the necessary library follwing the list below or you can install in terminal through command `pip install -r requirements.txt`
+2. Install the necessary library follwing the list below 
 ```
 sentence_transformers == 5.1.0
 numpy == 2.1.3
@@ -19,6 +19,10 @@ torch == 2.7.1
 pandas == 2.2.3
 streamlit == 1.48.1
 peft
+```
+or you can install all-in-one in terminal through command 
+```
+pip install -r requirements.txt
 ```
 3. run this command in terminal, it will open in your browser and enjoy!! :)
 ```
