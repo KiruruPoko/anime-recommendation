@@ -124,7 +124,7 @@ def recommend_anime(q_encode, embeddings, df, top_k=3):
 
 # --- Streamlit app ---
 def main():
-    df = load_data("..g/anime recommendation/data/anime_clean.csv") 
+    df = load_data("../anime recommendation/data/anime_clean.csv") 
     model = load_model()
     #embeddings = embed_corpus(model, df['text_corpus'].to_list())
     embeddings = torch.load('embedding_corpus.pt', map_location=device).to(device)
