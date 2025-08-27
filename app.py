@@ -130,7 +130,7 @@ def main():
     embeddings = torch.load('embedding_corpus.pt', map_location=device).to(device)
 
     st.title("Anime Recommendation System 🇯🇵")
-
+    st.markdown("##### Find anime that has the plot you want!!")
     query = st.text_input("Enter your anime search query 👇", placeholder = "Example query: Anime about spy that has to create a fake family for a mission")
 
     if query:
