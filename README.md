@@ -1,7 +1,7 @@
 # Anime-recommendation
 A fine-tuned embedding model for recommending anime from user query.\
-This project is heavily inspired from [manga-recommendation](https://github.com/jjentaa/manga-recommendation) by [@jjentaa](https://github.com/jjentaa)
-
+This project is heavily inspired from [manga-recommendation](https://github.com/jjentaa/manga-recommendation) by [@jjentaa](https://github.com/jjentaa)\
+Dataset by [Md Sazzad Siddique (Version 1)](https://www.kaggle.com/datasets/sazzadsiddiquelikhon/myanimelist-anime-database-july-2025)
 ### You can try the web application for the model [here](https://anime-recommendation-ebx77y4id4svvfdamd7uq3.streamlit.app/)
 ## Fine-tune model
 1. Using `mistralai/Mistral-7B-Instruct-v0.2` for generated query and use it for fine tuning pre-trained model
